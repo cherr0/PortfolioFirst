@@ -37,7 +37,7 @@
   
   /* Typography */
   /* 기본 폰트 배열 */
-
+  
   h1 {
     font-size: var(--font-large);
     font-weight: var(--weight-bold);
@@ -62,6 +62,6 @@
   p {
     font-size: var(--font-regular);
     font-weight: var(--weight-regular);
-    color: var(--color-black));
+    color: var(--color-black);
     margin: 4px 0;
   }
