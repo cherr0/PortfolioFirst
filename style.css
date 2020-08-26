@@ -101,12 +101,20 @@ margin: 4px 0;
 
 /* Navbar */
 #navbar {
+    position: fixed;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-pink);
     align-items: center;
     color: var(--color-white);
     padding: 16px;
+    background-color: transparent;
+    transition: all var(--animation-duration) ease-in-out;
+}
+
+#navbar.navbar--dark {
+    background-color: var(--color-pink);
+    padding: 4px;
 }
 
 .navbar__menu {
@@ -143,6 +151,7 @@ margin: 4px 0;
 #home {
     background: url("img/home-background.png") center/cover;
     padding: 40px;
+    padding-top: 120px;
     text-align: center;
 }
 
