@@ -21,3 +21,28 @@ document.addEventListener('scroll', () => {
         navbar.classList.remove('navbar--dark');
     }
 });
+
+
+
+// Handle scrolling when tapping onn the navbar menu
+const navbarMenu = document.querySelector('.navbar__menu');
+navbarMenu.addEventListener('click', () => {
+    // 동작확인
+    // console.log('hello');
+    // console.log(event.target.dataset.link);
+
+    const target = event.target;
+    const link = target.dataset.link;
+
+    // 링크가 있는 경우에만 수행
+    if(link == null){
+        return;
+    }else {
+        
+        console.log(event.target.dataset.link);
+        const scrollTo = document.querySelector(link);
+        scrollTo.scrollIntoView({ behavior: 'smooth' });
+
+    }
+
+})
