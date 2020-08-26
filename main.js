@@ -37,12 +37,22 @@ navbarMenu.addEventListener('click', () => {
     // 링크가 있는 경우에만 수행
     if(link == null){
         return;
-    }else {
-        
-        console.log(event.target.dataset.link);
-        const scrollTo = document.querySelector(link);
-        scrollTo.scrollIntoView({ behavior: 'smooth' });
-
     }
 
+    scrollIntoView(link);
+
 })
+
+
+
+// Handle click on "contact me" button on home
+const homeContactBtn = document.querySelector('.home__contact');
+contactMe.addEventListener('click', () => {
+    scrollIntoView('#contact');
+})
+
+
+function scrollIntoView(selector) {
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({ behavior: 'smooth'});
+}
