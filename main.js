@@ -94,19 +94,24 @@ workBtnContainer.addEventListener('click', (e) => {
         return;
     }
 
+    // Remove selection from the previous item and select the new one
+    const active =document.querySelector('.category__btn.selected');
+    active.classList.remove('selected');
+    const target = e.target.nodeName === 'BUTTON' ? e.target : e.target.parentNode;
+    e.target.classList.add('selected');
+
     projectContainer.classList.add('anim-out');
-    projects.forEach((project) => {
-        //동작확인
-        // console.log(project.dataset.type);
-
-        if( filter === '*' || filter === project.dataset.type) {
-            project.classList.remove('invisible');
-        } else {
-            project.classList.add('invisible');
-        }
-    });
-
     setTimeout(() => {
+        projects.forEach((project) => {
+            //동작확인
+            // console.log(project.dataset.type);
+    
+            if( filter === '*' || filter === project.dataset.type) {
+                project.classList.remove('invisible');
+            } else {
+                project.classList.add('invisible');
+            }
+        });
         projectContainer.classList.remove('anim-out');
     }, 300);
 
