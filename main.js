@@ -42,14 +42,14 @@ navbarMenu.addEventListener('click', () => {
 
     scrollIntoView(link);
 
-})
+});
 
 
 // Handle click on "contact me" button on home
 const homeContactBtn = document.querySelector('.home__contact');
 homeContactBtn.addEventListener('click', () => {
     scrollIntoView('#contact');
-})
+});
 
 
 
@@ -61,15 +61,70 @@ document.addEventListener('scroll', ()=> {
     // 동작확인
     // console.log(1 - window.scrollY / homeHeight);
     home.style.opacity = 1 - window.scrollY / homeHeight;
+});
+
+
+
+// Show "arrow up" button when scrolling down
+const arrowUp = document.querySelector('.arrow-up');
+document.addEventListener('scroll', ()=> {
+    if(window.scrollY > homeHeight / 2) {
+        arrowUp.classList.add('visible');
+    }else{
+        arrowUp.classList.remove('visible');
+    }
+});
+
+
+// Handle click on the "arrow up" button
+arrowUp.addEventListener('click', () => {
+    // scrollIntoView('#home');
+    window.scrollTo(0,0);
 })
 
 
+// Projects
+const workBtnContainer = document.querySelector('.work__categories');
+const projectContainer = document.querySelector('.work__projects');
+const projects = document.querySelectorAll('.project');
+
+workBtnContainer.addEventListener('click', (e) => {
+    const filter = e.target.dataset.filter || e.target.parentNode.dataset.filter;
+    if(filter == null){
+        return;
+    }
+
+    projectContainer.classList.add('anim-out');
+    projects.forEach((project) => {
+        //동작확인
+        // console.log(project.dataset.type);
+
+        if( filter === '*' || filter === project.dataset.type) {
+            project.classList.remove('invisible');
+        } else {
+            project.classList.add('invisible');
+        }
+    });
+
+    setTimeout(() => {
+        projectContainer.classList.remove('anim-out');
+    }, 300);
 
 
+    // 위의 forEach 와 동일
+    // 1.
+    // for(let project of projects) {
 
+    // }
 
+    // 2.
+    // let project;
+    // for(let i=0 ; i < projects.length ; i++){
+    //     project = projects[i];
+    // }
 
-
+    console.log(filter);
+})
 
 
 

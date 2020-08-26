@@ -254,16 +254,16 @@
         <h1>My work</h1>
         <h3>Projects</h3>
         <div class="work__categories">
-          <button class="category__btn active">All<span class="category__count">8</span></button>
-          <button class="category__btn">Front-end<span class="category__count">3</span></button>
-          <button class="category__btn">Back-end<span class="category__count">3</span></button>
-          <button class="category__btn">Mobile<span class="category__count">2</span></button>
+          <button class="category__btn active" data-filter="*">All<span class="category__count">8</span></button>
+          <button class="category__btn" data-filter="front-end">Front-end<span class="category__count">3</span></button>
+          <button class="category__btn" data-filter="back-end">Back-end<span class="category__count">3</span></button>
+          <button class="category__btn" data-filter="mobile">Mobile<span class="category__count">2</span></button>
         </div>
 
         <div class="work__projects">
           <!-- 주소는 각 프로젝트에 맞는 링크 연결 -->
           <!-- 1 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="front-end">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -272,7 +272,7 @@
           </a>
 
           <!-- 2 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="front-end">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -281,7 +281,7 @@
           </a>
 
           <!-- 3 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="back-end">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -290,7 +290,7 @@
           </a>
         
           <!-- 4 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="back-end">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -299,7 +299,7 @@
           </a>
 
           <!-- 5 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="back-end"> 
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -308,7 +308,7 @@
           </a>
 
           <!-- 6 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="back-end">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -317,7 +317,7 @@
           </a>
 
           <!-- 7 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="mobile">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -326,7 +326,7 @@
           </a>
 
           <!-- 8 -->
-          <a href="https://github.com/cherr0" class="project" target="blank">
+          <a href="https://github.com/cherr0" class="project" target="blank" data-type="mobile">
             <img class="project__img" src="img/projects/youtube.png" alt="Youtube">
             <div class="project__description">
               <h3>Youtube Site</h3>
@@ -392,5 +392,9 @@
       <div class="contact__rights">Copyright@2020. Webpublisher. 박중원. All rights reserved</div>
     </section>
 
+    <!-- Arrow up -->
+    <button class="arrow-up">
+      <i class="fas fa-arrow-up"></i>
+    </button>
 </body>
 </html>
