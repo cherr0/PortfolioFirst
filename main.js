@@ -41,7 +41,7 @@ navbarMenu.addEventListener('click', () => {
         return;
     }
 
-    navbarMeun.classList.remove('open');
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 
 });
